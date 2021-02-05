@@ -1,15 +1,16 @@
 ---
 title: "Github.io로 블로그 시작하기"
-
 categories: 
   - github
 tags:
   - github.io
   - Blog
   - github
+last_modified_at: 2021-02-05T08:06:00 -0500
 toc: true
 toc_sticky: true
 toc_label: "주요 목차"
+
 ---
 
 ## {{ page.title }}
