@@ -7,6 +7,9 @@ tags:
   - github.io
   - Blog
   - github
+toc: true
+toc_sticky: true
+toc_label: "주요 목차"
 ---
 
 ## {{ page.title }}
