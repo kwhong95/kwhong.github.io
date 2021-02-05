@@ -1,8 +1,8 @@
 ---
 title: "Github.io로 블로그 시작하기"
 
-cartegories: 
-  - Github
+categories: 
+  - github
 tags:
   - github.io
   - Blog
