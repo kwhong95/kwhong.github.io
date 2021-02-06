@@ -173,7 +173,8 @@ console.log(`value: ${symbol1.description}, type: ${typeof symbol1}`);
 
 
 ### 2. Object - box container
-> 가장 변수들의 집합 
+> 변수들의 집합 
+
 ```js
 const hong = { name: 'hong', age: 27 };
 hong.age = 22; // possible
