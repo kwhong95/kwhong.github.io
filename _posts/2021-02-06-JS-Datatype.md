@@ -153,7 +153,7 @@ console.log(`value: ${x}, type: ${typeof x}`);
 보통 `null`은 변수에 빈공간 즉, 아무런 값도 넣지 않는다고 선언한 것이고  
 `undefined`는 변수를 선언했는데 아무 값도 할당 되지 않은 것입니다.
 
-## 1-5 symbol
+#### 1-5 symbol
 ```js
 const symbol1 = Symbol('id');
 const symbol2 = Symbol('id');
@@ -174,6 +174,35 @@ console.log(`value: ${symbol1.description}, type: ${typeof symbol1}`);
 
 ### 2. Object - box container
 > 가장 변수들의 집합 
+```js
+const hong = { name: 'hong', age: 27 };
+hong.age = 22; // possible
+```
+<img width="923" alt="스크린샷 2021-02-06 오후 11 31 55" src="https://user-images.githubusercontent.com/70752848/107121015-82fdee80-68d3-11eb-8c25-78d643b16f7e.png">
+
+앞서 언급했듯이 **const**로 생성된 변수는 변경이 불가능하지만 위 그림처럼 내부 요소들에 접근해서 변경이 가능합니다. 
 
 ### 3. Function - first-class function
-> JS에서는 함수 또한 데이터 타입 중 하나입니다. 즉, 함수도 변수에 할당하여 사용이 가능하고 함수의 파라미터로 전달이 가능하며, 함수의 리턴 타입으로 함수를 리턴할 수 있습니다.(first-class function)
+> JS에서는 함수 또한 데이터 타입 중 하나입니다. 즉, 함수도tt 변수에 할당하여 사용이 가능하고 함수의 파라미터로 전달이 가능하며, 함수의 리턴 타입으로 함수를 리턴할 수 있습니다.(first-class function)
+
+
+## 6. Dynamic typing: dynamically typed language
+```js
+let text = 'hello';
+console.log(text.charAt(0)); // h
+console.log(`value: ${text}, type: ${typeof text}`);
+// value: hello, type: string
+text = 1;
+console.log(`value: ${text}, type: ${typeof text}`);
+// value: 1, type: number
+text = '7' + 5;
+console.log(`value: ${text}, type: ${typeof text}`);
+// value: 75, type: string
+text = '6' / '2';
+console.log(`value: ${text}, type: ${typeof text}`);
+// value: 3, type: number
+console.log(text.charAt(0));
+// TypeError: text.charAt is not a function
+```
+JS는 어떻게 보면 똑똑하지만 뒤통수를 치는 언어입니다 ;)  
+위처럼 굉장히 다이나믹하게 결과값이 바뀌는 것을 볼 수 있는데 문자와 숫자를 더하거나 문자를 나누는 것인데 스스로 어떤 의미인지 판단해서 타입을 결정합니다. 하지만 저렇게 처음에는 문자열이었던 변수가 변환을 통해 숫자 또는 다른 타입으로 변경이되면 기존의 함수에서 타입에러가 발생하는 경우가 생겨 뒤통수를 맞는 일도 생기죠..
