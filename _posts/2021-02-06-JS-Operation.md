@@ -212,3 +212,129 @@ console.log(null == undefined);
 console.log(null === undefined);
 ```
 정답은??? :-)
+
+## 9. If operators
+```js
+const name = 'kwhong';
+if (name === 'kwhong') {
+    console.log('Hello kwhong');
+} else if (name === 'shkim') {
+    console.log('Hello shKim');
+} else {
+    console.log('unknown');
+}
+```
+정말정말 중요한 **Conditional 연산자(if)**입니다.  
+if, else if, else 이 세 연산자로 값을 비교한 뒤 상황에 맞는 것을 출력하는 로직을 작성할 수 있습니다.
+
+## 10. ? operators
+```js
+console.log(name === 'kwhong' ? 'yes' : 'no');
+```
+이것도 정말 중요한 **Ternary 연산자(?)**입니다.
+값을 비교한 뒤 **?** 기호를 통해 true와 false의 반환에 따라 다른 출력을 가져오는 로직을 작성할 수 있습니다. 매우매우 유용하죠.
+
+## 11. Switch operator
+```js
+const browser = 'IE';
+switch (browser) {
+    case 'IE':
+        console.log('go away!');
+        break;
+    case 'Chrome':
+        console.log('love you!');
+        break;
+    case 'Firefox':
+        console.log('love you!');
+        break;
+    default:
+        console.log('same all!');
+        break;
+}
+```
+다음도 정말 유용한 연산자인 **Switch**입니다.  
+case로 경우의 수를 나누어 출력 값을 다르게 설정할 수 있죠.  
+보시면 Chrome과 Firefox의 경우 출력값이 같죠?
+```js
+case 'Chrome':
+case 'Firefox':
+  console.log('love you');
+  break;
+```
+그렇다면 이렇게 두 경우를 합쳐서 간단하게 로직을 작성할 수도 있습니다 :)
+
+## 12. Loops
+### 1. While loop
+```js
+let i = 3;
+while (i > 0) {
+    console.log(`while: ${i}`);
+    // while: 3
+    // while: 2
+    // while: 1
+    i--;
+}
+```
+이번엔 **반복문**입니다. 먼저 **While문**인데요.  
+이 반복문은 false를 반환하기 전까지 무한대로 반복하는 기능을 수행합니다.
+
+### 2. Do-while loop
+```js
+// i = 0
+do {
+    console.log(`do while: ${i}`);
+    // do while: 0
+    i--;
+} while (i > 0);
+```
+**Do while문**은 while과 다르게 먼저 로직을 수행한 뒤 조건을 검사합니다. 그래서 false를 반환하기 전에 수행했기 때문에 콘솔에 결과값이 찍히는 것을 확인할 수 있죠.
+
+### 3. For loop
+```js
+for (let i = 3; i > 0; i = i - 2) {
+    console.log(`inline variable for: ${i}`);
+    // inline variable for: 3
+    // inline variable for: 1
+}
+```
+다음은 정말정말 자주보게 될 **for문**입니다. 위처럼 먼저 조건을 수행할 변수를 선언하고 어느 상황까지 로직을 수행할지, 로직을 어떻게 수행할지에 대한 것을 작성합니다.
+
+### 4. nested loops
+```js
+for (let i = 0; i < 10; i++) {
+    for (let j = 0; j < 10; j++) {
+        console.log(`i: ${i}, j: ${j}`);
+    }
+}
+```
+While 과 For 문은 이렇게 nesting 해서 로직을 작성할 수도 있는데요.
+이것은 [시간복잡도](https://blog.chulgil.me/algorithm/) 개념에서 `Big O(n^2)`가 됩니다. CPU의 성능상 안좋기 때문에 꼭 필요한 경우에만 사용하는 것이 좋습니다.
+
+### 5. Quiz 
+```js
+// break, continue
+// Q1. iterator from 0 to 10 and print only even numbers(use continue)
+
+// Q2. iterate from 0 to 10 and print numbers until reaching 8(use break)
+```
+지금까지 배운것을 활용할 퀴즈입니다. 
+
+### 6. Quiz - Solution
+```js
+// Q.1 Solution
+for (let i = 0; i <= 10; i++) {
+    if( i%2 !== 0 ) {
+        continue;
+    }
+    console.log(`i: ${i}`);
+}
+
+// Q.2 Solution
+for (let i = 0; i <= 10; i++) {
+    if ( i > 8 ) {
+        break;
+    }
+    console.log(`i: ${i}`);
+}
+```
+정답은 절대 아니구요! 다르게 작성하셨어도 결과만 재대로 나왔다면 좋습니다 :)
