@@ -1,5 +1,5 @@
 ---
-title: "JS - 연산 & 반복문"
+title: "JS 연산 & 반복문"
 categories: 
   - JavaScript
 tags:
