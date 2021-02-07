@@ -19,7 +19,7 @@ toc_label: "주요 목차"
 
 ### 1. 작동방식
 
-참조 글 : [쉘이란?](https://devkingdom.tistory.com/185), [커널이란?](https://www.redhat.com/ko/topics/linux/what-is-the-linux-kernel), [시스템 콜(시스템 호출이란?)](https://luckyyowu.tistory.com/133)
+참조 글 : [쉘이란?](https://devkingdom.tistory.com/185), [커널이란?](https://www.redhat.com/ko/topics/linux/what-is-the-linux-kernel), [시스템 콜(시스템 호출이란?)](https://luckyyowu.tistory.com/133), [Unix란 무엇인가?](https://namu.wiki/w/UNIX?from=%EC%9C%A0%EB%8B%89%EC%8A%A4)
 
 - 사용자는 **쉘**이라는 프로그램과 대화를 합니다.(입력이 바로 Unix와 대화를 의미하지 않습니다.)
 - 쉘은 사용자로부터 Unix를 보호하고, Unix 또한 사용자를 보호합니다.

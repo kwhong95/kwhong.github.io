@@ -2,5 +2,5 @@
 main:
   - title: "Home"
     url: https://kwhong95.github.io/
-  - title: "About"
-    url: /about/
+  # - title: "About"
+  #  url: /about/
