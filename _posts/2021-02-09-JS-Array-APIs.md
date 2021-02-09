@@ -75,13 +75,44 @@ const fruits = ['🍎', '🍌', '🍊'];
 const fruits = '🍎, 🍌, 🍊, 🍉';
 ```
 
+### Q3. make this array look like this: [5, 4, 3, 2, 1]
+```js
+const array = [1, 2, 3, 4, 5];
+```
+
+### Q4. make new array without the first two elements
+```js
+const array = [1, 2, 3, 4, 5];
+```
+
+```js
+class Student {
+    constructor(name, age, enrolled, score) {
+        this.name = name;
+        this.age = age;
+        this.enrolled = enrolled;
+        this.score = score;
+    }
+}
+const students = [
+    new Student('A', 29, true, 45),
+    new Student('B', 28, false, 80),
+    new Student('C', 30, true, 90),
+    new Student('D', 40, false, 66),
+    new Student('E', 18, true, 88),
+];
+```
+앞으로는 위의 클래스로 퀴즈를 풉니다.
+
+### Q5. find a student with the score 90
+
 ## 3. Soluctions
 
 ### Q1
 ```js
 const fruits = ['🍎', '🍌', '🍊'];
 const result = fruits.join();
-console.log(result);
+console.log(result); // 🍎,🍌,🍊
 ```
 - **API : Join**  
 - syntax : `join(separator?: string): string;`
@@ -90,7 +121,35 @@ console.log(result);
 ```js
 const fruits = '🍎, 🍌, 🍊, 🍉';
 const result = fruits.split(',');
-console.log(result);
+console.log(result); // [ '🍎', ' 🍌', ' 🍊', ' 🍉' ]
 ```
 - **API : Split**
 - syntax : `split(separator: string | RegExp, limit?: number): string[];`
+
+### Q3
+```js
+const array = [1, 2, 3, 4, 5];
+const result = array.reverse();
+console.log(result); // [ 5, 4, 3, 2, 1 ]
+```
+- **API : Reverse**
+- syntax : `reverse(): T[];`
+- 주의 사항: array 자체도 바뀝니다.
+
+### Q4
+```js
+const array = [1, 2, 3, 4, 5];
+const result = array.slice(2, 5);
+console.log(array); // [1, 2, 3, 4, 5]
+console.log(result); // [3, 4, 5]
+```
+- **API : Slice**
+- syntax : `slice(start?: number, end?: number): T[];`
+
+### Q5
+```js
+const result = students.find(student => student.score === 90);
+console.log(result); // Student { name: 'C', age: 30, enrolled: true, score: 90 }
+```
+- **API : Find**
+- syntax : `find<S extends T>(predicate: (this: void, value: T, index: number, obj: T[]) => value is S, thisArg?: any): S | undefined;`
