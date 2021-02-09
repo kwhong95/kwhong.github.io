@@ -105,10 +105,43 @@ const students = [
 앞으로는 위의 클래스로 퀴즈를 풉니다.
 
 ### Q5. find a student with the score 90
+```json
+Student { name: 'C', age: 30, enrolled: true, score: 90 }
+```
+
+### Q6. make an array of enrolled student
+```json
+[
+  Student { name: 'A', age: 29, enrolled: true, score: 45 },
+  Student { name: 'C', age: 30, enrolled: true, score: 90 },
+  Student { name: 'E', age: 18, enrolled: true, score: 88 }
+]
+```
+
+### Q7. make an array containing only student's scores
+```json
+[45, 80, 90, 66, 88]
+```
+
+### Q8. check if there is a student with the score lower than 50
+```json
+true
+```
+
+### Q9. compute student's average score
+```
+73.8
+```
+
+### Q10. make a string containing all the scores
+
+```js
+'45, 80, 90, 66, 88'
+```
 
 ## 3. Soluctions
 
-### Q1
+### Sol1
 ```js
 const fruits = ['🍎', '🍌', '🍊'];
 const result = fruits.join();
@@ -117,7 +150,7 @@ console.log(result); // 🍎,🍌,🍊
 - **API : Join**  
 - syntax : `join(separator?: string): string;`
 
-### Q2
+### Sol2
 ```js
 const fruits = '🍎, 🍌, 🍊, 🍉';
 const result = fruits.split(',');
@@ -126,7 +159,7 @@ console.log(result); // [ '🍎', ' 🍌', ' 🍊', ' 🍉' ]
 - **API : Split**
 - syntax : `split(separator: string | RegExp, limit?: number): string[];`
 
-### Q3
+### Sol3
 ```js
 const array = [1, 2, 3, 4, 5];
 const result = array.reverse();
@@ -136,7 +169,7 @@ console.log(result); // [ 5, 4, 3, 2, 1 ]
 - syntax : `reverse(): T[];`
 - 주의 사항: array 자체도 바뀝니다.
 
-### Q4
+### Sol4
 ```js
 const array = [1, 2, 3, 4, 5];
 const result = array.slice(2, 5);
@@ -146,10 +179,49 @@ console.log(result); // [3, 4, 5]
 - **API : Slice**
 - syntax : `slice(start?: number, end?: number): T[];`
 
-### Q5
+### Sol5
 ```js
 const result = students.find(student => student.score === 90);
 console.log(result); // Student { name: 'C', age: 30, enrolled: true, score: 90 }
 ```
 - **API : Find**
 - syntax : `find<S extends T>(predicate: (this: void, value: T, index: number, obj: T[]) => value is S, thisArg?: any): S | undefined;`
+
+### Sol6
+```js
+const result = students.filter((student) => student.enrolled === true);
+console.log(result);
+```
+- **API : Filter**
+- syntax : `filter<S extends T>(predicate: (value: T, index: number, array: T[]) => value is S, thisArg?: any): S[];`
+
+### Sol7
+```js
+const result = students.map(student => student.score);
+console.log(result); // [ 45, 80, 90, 66, 88 ] 
+```
+- **API : Map**
+- syntax : `map<U>(callbackfn: (value: T, index: number, array: T[]) => U, thisArg?: any): U[];`
+
+### Sol8
+```js
+const result = students.some(student => student.score < 50);
+console.log(result);
+```
+- **API : Some**
+- syntax: `some(predicate: (value: T, index: number, array: T[]) => unknown, thisArg?: any): boolean;`
+
+### Sol9
+```js
+const result = students.reduce((prev, curr) => prev + curr.score, 0);
+console.log(result / students.length);
+```
+- **API : Reduce**
+- syntax : `reduce(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array: T[]) => T): T;`
+
+### Sol10
+```js
+const result = students.map(student => student.score).join();
+console.log(result);
+```
+- **API : Map + Join**
