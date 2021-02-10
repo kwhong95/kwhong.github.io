@@ -107,3 +107,35 @@ getFruits().then(console.log); // 🍎 + 🍌
 - 프로미스 체이닝을 계속 하다보면 코드의 가독성이 떨어집니다.
 - async 와 await는 Promise를 간결/간편하고 동기적으로 실행되는것 처럼 보이게 만들어주는 API입니다.
 - async 와 await는 새로운 것이 추가 된게 아니라, 기존에 존재하는 Promise 위에 조금 더 간편한 API를 제공함 이런 것을 **syntactic sugar** 라고 한다 (Class도 마찬가지죠.)
+
+## 3. Useful Promise APIs
+### 1. all
+```js
+function getAllFruits() {
+    return Promise.all([getApple(), getBanana()])
+        .then(fruits => fruits.join(' + '));
+}
+getAllFruits().then(console.log); // 🍎 + 🍌
+```
+Promise 함수인 getApple과 getBanana를 병렬적으로 함께 호출하는 방법인 **All** API입니다. 이렇게 호출하면 직렬적 호출때보다 무려 2배의 시간이 줄죠. 만약 3개, 4개 그 이상이라면 엄청난 시간 단축이겠죠?
+
+### 2. race
+```js
+async function getApple() {
+    await delay(2000); // Update!
+    return '🍎';
+}
+
+async  function getBanana() {
+    await delay(3000);
+    return '🍌';
+}
+
+function getOnlyOne() {
+    return Promise.race([getApple(), getBanana()]);
+}
+getOnlyOne().then(console.log); // 🍎
+```
+다음으로 유용한 API는 **race**입니다.  
+마치 네임처럼 경주를 하는 개념입니다.   
+제일 먼저 받아와지는 1가지 Promise만 출력합니다. 
