@@ -11,8 +11,6 @@ toc_sticky: true
 toc_label: "주요 목차"
 ---
 
-# {{ page.title }}
-
 ## 1. CSV란 무엇인가?
 
 <img width="173" alt="스크린샷 2021-02-05 오후 9 22 57" src="https://user-images.githubusercontent.com/70752848/107033221-53c67f00-67f8-11eb-9670-7ebe049c3f62.png">

@@ -10,8 +10,6 @@ toc_sticky: true
 toc_label: "주요 목차"
 ---
 
-# {{ page.title }}
-
 > 리눅스 공부를 하며 용어정리한 노트입니다.
 
 ## 1. 리눅스(Linux)

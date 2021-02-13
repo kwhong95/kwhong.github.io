@@ -11,7 +11,6 @@ toc_sticky: true
 toc_label: "주요 목차"
 ---
 
-# {{ page.title }}
 > 드디어 비동기의 꽃 Async & Await API에 대해서 배워보겠습니다.
 
 ## 1. Why use Async?

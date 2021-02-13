@@ -11,8 +11,6 @@ toc_sticky: true
 toc_label: "주요 목차"
 ---
 
-# {{ page.title }}
-
 ## 1. What is React ?
 > 리액트는 간단하게 사용자 인터페이스를 구축하기 위한 라이브러리입니다.
 

@@ -11,8 +11,6 @@ toc_sticky: true
 toc_label: "주요 목차"
 ---
 
-# {{ page.title }}
-
 > 10가지 Quiz를 통해서 배열의 API들을 활용해봅시다!
 
 ## 1. 내가 생각한 유용한 Array APIs 정리

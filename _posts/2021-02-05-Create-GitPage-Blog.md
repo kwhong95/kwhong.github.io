@@ -13,8 +13,6 @@ toc_label: "주요 목차"
 
 ---
 
-## {{ page.title }}
-
 > GitHub Blog 서비스로 활용중인 `github.io` 블로그를 시작해보자.
 
 GitHub Blog 서비스의 이름은 Pages이고 무료로 배포까지 해주니 너무나 감사한 서비스라고 할수 있다.

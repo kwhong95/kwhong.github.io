@@ -10,8 +10,6 @@ toc_sticky: true
 toc_label: "주요 목차"
 ---
 
-# {{ page.title }}
-
 <img width="275" alt="스크린샷 2021-02-07 오후 11 05 13" src="https://user-images.githubusercontent.com/70752848/107148885-fa498600-6998-11eb-8bf8-43a04e044789.png">
 
 프로그램에는 다양하고 중요한 기능을 하는 **함수**들이 존재하는데요.  

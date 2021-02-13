@@ -11,8 +11,6 @@ toc_sticky: true
 toc_label: "주요 목차"
 ---
 
-# {{ page.title }}
-
 > Unix와 Linux에 기본 개념에 대해서 알아보도록 합니다.
 
 ## 1. 기본 개념
