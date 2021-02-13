@@ -122,3 +122,14 @@ export default class Header extends React.Component {
 > 컴포넌트의 렌더링 및 작동 방식을 결정하는 오브젝트인 'State'가 컴포넌트에 사용할 수 있습니다.  
 "App" 또는 "global" State는 단일 컴포넌트가 아닌 전체 UI에서 사용할 수 있는 상태를 나타냅니다.  
 리액트 16.8 이전에, 우리는 State를 사용하기 위해 클래스 기반 컴포넌트를 사용해야 했습니다. 이제는 Hooks을 사용한 함수 기반 컴포넌트를 사용합시다!
+
+**React Hook 이란?**  
+React Hooks는 컴포넌트 요소의 리액트 State 및 LifeCycle에 연결할 수 있는 기능입니다.
+
+- useState - 상태 저장 값 및 업데이트 기능을 반환합니다.
+- useEffect - 컴포넌트에서 부수 기능 수행 (fetch, PageRender etc..)
+- useContext, useReducer, useRef - 일단 나중에 합시다 이건..
+
+사용자 커스텀 Hooks도 직접 만들 수 있습니다.
+
+> LET's Start Happy Hacking!
