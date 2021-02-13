@@ -72,3 +72,53 @@ React는 상호작용이 많은 UI를 만들 때 생기는 어려움을 줄여�
 > 우리는 리액트를 배우기전에 JS를 잘 다루어야 합니다.  
 
 간혹 JS를 무시하고 React의 비교적 간단한 Hook들을 먼저 접해서 개발하시는 분들도 많이 있던데.. 어차피 React도 JS의 라이브러리입니다. JS없이는 React도 없을 뿐더러 **useState**, **Ref**, **Effect** 등등 다 JS로 만들어진 React Hook입니다. 기본적인 동작 방법을 알고 사용해야 효율적인 컴포넌트, 즉 효율적인 **Application**을 만들 수 있습니다. 저 또한 React의 장점으로 복붙 코딩만하다가 큰 코 다친 경험이.. 🤣
+
+**JS 선수 지식**
+- 데이터 유형, 변수, 함수, 루프 등
+- Promise & 비동기식
+- `forEach()` 및 `map()`과 같은 배열 방법
+- API 가져오기 및 HTTP 요청하기
+
+## 4. React Component Analysis
+1. 컴포넌트를 잘 활용하자.
+> React를 사용할 때는 UI를 여러 개별 **Components**로 생각하라!
+
+![image](https://user-images.githubusercontent.com/70752848/107854222-e81a8c80-6e5d-11eb-8d63-3936b56a4b0f.png)
+
+각 화면을 구성하고 있는 수입, 지출, Form 크게 3가지로 나눌 수 있습니다.  
+큰 3가지 요소 안에도 여러가지 컴포넌트들이 존재하고 이를 잘 분리해서 활용해야 합니다.  
+
+2. 함수 & 클래스 컴포넌트
+
+1. **함수형 컴포넌트**
+```js
+export const Header = ( props ) => {
+  return (
+    <div>
+      <h1>Header</h1>
+    </div>
+  )
+}
+```
+컴포넌트 는 JSX를 렌더링/반환합니다.
+컴포넌트는 "prop"도 사용할 수 있습니다.
+
+2. 클래스형 컴포넌트
+```js
+export default class Header extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Header</h1>
+      </div>
+    )
+  }
+}
+```
+한물간 클래스형 컴포넌트지만.. 모르면 또 뚝배기 깨집니다.  
+기존에 만들어진 것들 중에 클래스형도 꽤나 있어서 조금을 알아두고 가는 것도 좋을 듯합니다만 저는 함수형에 좀더 집중하겠습니다.
+
+## 5. Working With State
+> 컴포넌트의 렌더링 및 작동 방식을 결정하는 오브젝트인 'State'가 컴포넌트에 사용할 수 있습니다.  
+"App" 또는 "global" State는 단일 컴포넌트가 아닌 전체 UI에서 사용할 수 있는 상태를 나타냅니다.  
+리액트 16.8 이전에, 우리는 State를 사용하기 위해 클래스 기반 컴포넌트를 사용해야 했습니다. 이제는 Hooks을 사용한 함수 기반 컴포넌트를 사용합시다!
