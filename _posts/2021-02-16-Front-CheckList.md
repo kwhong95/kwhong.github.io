@@ -96,6 +96,7 @@ toc_label: "주요 목차"
 <link  rel = " preload " href = " global.min.css " as = " style " onload = " this.rel = 'stylesheet' "> 
 <noscript > <link  rel = " stylesheet " href = " global.min. css " > </noscript >
 ```
+
 **왜?**
 > CSS 파일은 페이지로드를 차단하고 페이지 렌더링을 지연시킬 수 있습니다. **preload** 를 사용하면 브라우저가 페이지의 내용을 표시하기 시작하기 전에 실제로 CSS 파일을 로드 할 수 있습니다.
 
