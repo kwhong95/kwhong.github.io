@@ -30,6 +30,7 @@ toc_label: "주요 목차"
 
 **어떻게?**  
 > 대부분의 프레임 워크에는 웹 페이지 축소를 용이하게하는 플러그인이 있습니다. 자동으로 작업을 수행 할 수있는 NPM 모듈을 사용할 수 있습니다. 
+
 - 🎁[HTML 축소 | 코드 축소](http://minifycode.com/html-minifier/)
 - 🎁[온라인 HTML | CSS | JS 압축기](https://refresh-sf.com/)
 
@@ -84,6 +85,7 @@ toc_label: "주요 목차"
 
 **어떻게?**
 > 도구를 사용하여 빌드 또는 배포 전에나 배포 중에 파일을 자동으로 축소합니다.
+
 - 🎁[CSSnano](https://cssnano.co/): CSS를 많은 최적화를 통해 실행하여 최종 결과가 배포 환경에서 가능한 작도록 실행
 - 🎁[CSS Minifier](https://goonlinetools.com/css-minifier/)
 
@@ -122,6 +124,7 @@ toc_label: "주요 목차"
 
 **어떻게?**
 > 항상 외부 스타일 시트를 사용하거나 CSS를 `<head>`에 포함합니다(다른 CSS 성능 규칙을 따릅니다).
+
 - 📋[CSS 모범 사례 : CSS 인라인 스타일 피하기](https://www.lifewire.com/avoid-inline-styles-for-css-3466846)
 
 ### 2.4 스타일 시트 복잡성 분석하기
@@ -132,6 +135,7 @@ toc_label: "주요 목차"
 
 **어떻게?**
 > CSS 전처리기를 사용하여 CSS를 구성해야합니다. 아래 나열된 일부 온라인 도구는 코드를 분석하고 수정하는데도 도움이 될 수 있습니다.
+
 - [TesyMyCSS | CSS 성능 최적화 및 확인](https://www.testmycss.com/)
 - [CSS Stats](https://cssstats.com/)
 - [Macbre의 analyze-css: CSS 선택기 복잡성 및 성능 분석](https://github.com/macbre/analyze-css)
