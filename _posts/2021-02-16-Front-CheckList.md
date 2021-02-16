@@ -92,6 +92,7 @@ toc_label: "주요 목차"
 
 ### 2.1 CSS 파일 로드시 DOM 로드 차단 방지
 > CSS 파일은 DOM이로드되는 데 시간이 걸리는 것을 방지하기 위해 로드 차단을 방지합니다.
+
 ```html
 <link  rel = " preload " href = " global.min.css " as = " style " onload = " this.rel = 'stylesheet' "> 
 <noscript > <link  rel = " stylesheet " href = " global.min. css " > </noscript >
