@@ -211,3 +211,86 @@ SVG 사용: 도구를 사용하고 85 미만의 수준 압축을 지정하세요
 - 🔍[렌더링 차단 JS 제거](https://developers.google.com/speed/docs/insights/BlockingJS)
 - 🎁[JS 로딩 연기](https://www.internetmarketingninjas.com/tools/free-tools/pagespeed)
 
+## 5. 서버
+### 5.1 HTTPS의 장점(를 사용하자!)
+
+**왜?**
+> HTTPS는 전자 상거래 웹 사이트뿐만 아니라 데이터를 교환하는 모든 웹 사이트를위한 것입니다. 사용자가 공유 한 데이터 또는 외부 엔터티와 공유 된 데이터입니다. 오늘날 최신 브라우저는 안전하지 않은 사이트의 기능을 제한합니다. (예 : 인스턴스가 HTTPS를 사용하지 않는 경우 지리적 위치, 푸시 알림 및 서비스 워커가 작동하지 않습니다.) 그리고 오늘날은 이전보다 SSL 인증서로 프로젝트를 설정하는 것이 훨씬 더 쉽습니다 (그리고 Let 's Encrypt 덕분에 무료로 제공 ).
+
+- 🔍[HTTPS를 사용하는 이유 | Cloudflare](https://www.cloudflare.com/learning/ssl/why-use-https/)
+- 🔍[웹 성능 저하 없이 HTTPS 활성화 | Moz](https://moz.com/blog/enabling-https-without-sacrificing-web-performance)
+- 🔍[HTTPS가 웹 사이트 성능에 미치는 영향](https://wp-rocket.me/blog/https-affects-website-performance/)
+- 🔍[HTTP vs HTTPS vs HTTP2 - 실제 사례](https://www.tunetheweb.com/blog/http-versus-https-versus-http2/)
+- 🔍[HTTP vs HTTPS - 둘다 직접 테스트](https://www.httpvshttps.com/)
+
+### 5.2 웹페이지 크기를 최소화하기
+> 최소 1500 KB 미만, 이상적 크기는 500 KB 미만이며, 리소스를 최대한 줄이세요.
+
+**왜?**
+> 500KB 단위로 표시됩니다 웹의 상태에 따라 킬로바이트의 중앙값이 1500KB 표시됩니다. (모바일 그렇습니다.) 최상의 사용자 경험을 제공 할 때마다 사용자, 네트워크 연결, 디바이스에 최대한 많이야합니다.
+
+**어떻게?**
+> 프론트 엔드 성능 체크리스트의 모든 규칙은 리소스와 코드를 최대한 줄이도록하고 있습니다.
+
+- 🔍[페이지의 무게](https://httparchive.org/reports/page-weight#bytesTotal)
+- 🎁[내 사이트는 얼마일까?](https://whatdoesmysitecost.com/)
+- 🎁[web-Chrome DevTools에서 전체 페이지 크기 측정 - 스택 오버플로](https://stackoverflow.com/questions/38239980/measure-full-page-size-in-chrome-devtools)
+
+### 5.3 페이지 로드시간 단축하기
+> 이상적 시간은 3초 이내이며, 당연히 사용자에게 빠르게 콘텐츠가 전송되어야 합니다.
+
+**왜?**
+> 웹 사이트나 앱이 빨라질수록 많은 사용자의 바운스 증가합니다. 한편 전송이 느리다면 현 사용자나 미래의 사용자를 잃을 가능성도 있습니다. 이것은 주제에 대한 많은 연구가치를 증명합니다.
+
+**어떻게?**
+> Page Speed ​​Insight 또는 WebPageTest 와 같은 온라인 툴을 이용해 무엇이 페이지를 느리게 만드는지 분석하고, 프론트엔드 체크리스트를 이용해 로드 시간을 개선하세요.
+
+- 🎁[모바일 사이트 속도 비교](https://www.thinkwithgoogle.com/feature/testmysite/)
+- 🎁[모바일 웹 사이트 속도 및 성능 테스트](https://www.thinkwithgoogle.com/feature/testmysite/)
+- 🔍[2018년 평균 페이지 로드 시간 - 비교해보면 당신은 어떤가요?](https://www.thinkwithgoogle.com/feature/testmysite/)
+
+### 5.4 TTFB 시간을 줄이기
+> TTFB란 서버에 HTTP 요청을 보내고 브라우저가 첫 정보를 수신하기까지 걸리는 시간을 의미합니다. 1.3초 이내로 가능하도록 노력해봅시다.
+
+- 🔍[TTFB(Time to First Byte)](https://www.internetmarketingninjas.com/tools/free-tools/pagespeed)
+- 🎁[글로벌 지연 테스트 도구](https://latency.apex.sh/)
+
+### 5.5 쿠키의 크기 조절하기
+> 만약 쿠키를 사용한다면 각 쿠키가 4096 바이트를 넘으면 안되며, 도메인이 20개 이상의 쿠키를 가져가선 안됩니다.
+
+**왜?**
+> 쿠키는 HTTP 헤더에서 웹 서버와 브라우저 사이에 교환됩니다. 사용자의 응답 시간에 제한적으로 사용하기 쉽습니다.
+
+**어떻게?**
+>불필요한 쿠키를 제거하세요.
+
+- 🔍[쿠키](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
+- 🔍[웹 사이트 성능: 쿠키는 맛이 좋지 않습니다](https://www.monitis.com/blog/website-performance-cookies-dont-taste-so-good/)
+- 🔍[Google의 웹 성능 모범 사례 #3: 요청 오버 헤드 최소화](https://www.globaldots.com/blog/googles-web-performance-best-practices-3-minimize-request-overhead)
+
+### 5.6 HTTP 요청 최소화
+> 항상 모든 파일의 요청이 웹사이트나 어플리케이션에 필수 인지 확인하세요.
+
+- 🔍[외부 CSS 결합](https://www.internetmarketingninjas.com/tools/free-tools/pagespeed)
+- 🔍[외부 JS 결합](https://www.internetmarketingninjas.com/tools/free-tools/pagespeed)
+
+### 5.7 동일한 프로토콜에서 파일 제공
+> 예를들어 HTTPS를 사용하는 웹사이트에서 HTTP를 사용하여 소스에서 가져오는 파일을 제공하는 웹사이트를 피하세요. 웹사이트에서 HTTPS를 사용하는 경우 외부파일은 동일한 프로토콜에서 가져와야 합니다.
+
+### 5.8 연결 가능한 파일 제공
+> 연결 불가능 즉 404 요청을 하지 마세요
+
+- 🔍[잘못된 요청을 피하는 방법](https://www.internetmarketingninjas.com/tools/free-tools/pagespeed)
+
+### 5.9 올바른 HTTP 캐시 헤더 설정
+> 브라우저와 서버 사이 비용이 큰 왕복을 피하도록 HTTP 헤더를 설정하세요.
+
+- 🔍[브라우저 캐싱에 캐시 제어 사용](https://www.internetmarketingninjas.com/tools/free-tools/pagespeed)
+
+### 5.10 GZIP | Brotli 압축 활성화
+> Gzip 또는 Brotli와 같은 압축 방법을 사용하여 JS파일의 크기를 줄이세요. 더 작은 파일을 사용할수록 사용자가 더 빠르게 소스를 다운받을 수 있으므로 성능이 향상됩니다.
+
+- 🎁[무료 GZIP 압축 체커](https://www.websiteplanet.com/ko/webtools/gzip-compression/)
+- 🔍[사이트 속도 개선 - Brotli 압축으로 속도 개선해보기](https://happist.com/561373/%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%86%8D%EB%8F%84-%EA%B0%9C%EC%84%A0-%EB%B8%8C%EB%A1%9C%ED%8B%80%EB%A6%AC-%EC%95%95%EC%B6%95brotli-compression%EC%9C%BC%EB%A1%9C-%EC%86%8D%EB%8F%84%EB%A5%BC-%EA%B0%9C)
+- 🔍[CAN I USE..?](https://caniuse.com/brotli)
+
