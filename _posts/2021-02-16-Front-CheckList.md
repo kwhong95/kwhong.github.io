@@ -294,3 +294,12 @@ SVG 사용: 도구를 사용하고 85 미만의 수준 압축을 지정하세요
 - 🔍[사이트 속도 개선 - Brotli 압축으로 속도 개선해보기](https://happist.com/561373/%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%86%8D%EB%8F%84-%EA%B0%9C%EC%84%A0-%EB%B8%8C%EB%A1%9C%ED%8B%80%EB%A6%AC-%EC%95%95%EC%B6%95brotli-compression%EC%9C%BC%EB%A1%9C-%EC%86%8D%EB%8F%84%EB%A5%BC-%EA%B0%9C)
 - 🔍[CAN I USE..?](https://caniuse.com/brotli)
 
+## 6. REACT 성능 개선
+- [성능 최적화 - REACT](https://reactjs.org/docs/optimizing-performance.html)
+- [REACT 이미지 변환](https://cloudinary.com/documentation/react_image_manipulation)
+- [Chrome DevTools로 React 성능 디버깅](https://velog.io/@shroad1802/React-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94)
+- [REACT 성능 UPUP!!](https://web.dev/react/)
+
+
+## 7. 마치며
+> 사실 주니어 개발자가 최적화라는 것이 큰 중요성을 느끼기 어려웠지만.. 하도 주변에 최적화 최적화를 많이 들어서 공부를 시작했는데 리얼 개발자는 너무나 숙지할 것들이 많은 듯하다🤣! 페이지하나를 만드는데 이렇게 많은 요소들을 신경써야한다니.. 그래도 진정한 개발자가 되기 위해서 한번에 다는 못하더라도 하나씩 꼭 차근차근 깨부셔 보자😎!!!
