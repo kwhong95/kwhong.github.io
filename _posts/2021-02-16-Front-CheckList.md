@@ -175,3 +175,39 @@ SVG 사용: 도구를 사용하고 85 미만의 수준 압축을 지정하세요
 - 🔍[PNG8-The Clear Winner](https://www.sitepoint.com/png8-the-clear-winner/)
 - 🔍[8비트 vs 16비트 - 사용해야 하는 색 농도가 중요한 이유](https://www.diyphotography.net/8-bit-vs-16-bit-color-depth-use-matters/)
 
+## 4. JavaScript
+
+### 4.1 JS 최적화
+>  모든 JavaScript 파일를 축소하고 주석, 공백 및 새 줄이 프로덕션 파일에서 제거합니다 (HTTP / 2를 사용하는 경우에도 유효 함).
+
+**왜?**
+> 불필요한 공백, 주석 및 중단을 모두 제거하면 JavaScript 파일의 크기가 줄어들고 사이트의 페이지로드 시간이 빨라지고 사용자의 다운로드 속도가 분명히 줄어 듭니다.
+
+**어떻게?**
+> 아래 제안된 선물들을 사용하여 빌드 또는 배포 전이나 배포 중에 파일을 자동으로 축소합니다.
+
+- 🎁[Uglify-js-npm](https://www.npmjs.com/package/uglify-js)
+- 🎁[온라인 JS 압축기](https://refresh-sf.com/)
+- 🔍[HTTP/2 의 차이점 | 여전히 축소 후 연결해야하는가?](https://scaleyourcode.com/blog/article/28)
+
+### 4.2 JS 차단 방지
+> JavaScript 파일은 속성을 `async`사용하여 비동기식으로 로드 되거나 `defer`를 통해 지연됩니다.
+
+```html
+<!--지연 속성--> 
+<script  defer  src = " foo.js "> </script>
+
+<!--비동기 속성--> 
+<script  async  src = " foo.js "> </ script>
+```
+
+**왜?**
+> 자바 스크립트는 HTML 문서의 일반적인 구문 분석을 차단하므로 파서가 `<script>`태그 (특히 `<head>` 내부에 있음 )에 도달하면 가져 오기 및 실행을 중지합니다. 스크립트가 페이지 상단에 배치되는 경우 추가 `async`하거나 `defer`를 적극 권장하지만 `</body>`태그 바로 앞에있는 경우 가치가 떨어 집니다. 그러나 성능 문제를 피하기 위해 항상 이러한 속성을 사용하는 것이 좋습니다.
+
+**어떻게?**
+> 스크립트 태그에 속성으로 추가 `async`(스크립트가 다른 스크립트에 의존하지 않는 경우) 또는 `defer`(스크립트가 비동기 스크립트에 의존하는 경우).  
+작은 스크립트가 있는 경우 비동기 스크립트 위에 인라인 스크립트 위치를 사용할 수 있습니다.
+
+- 🔍[렌더링 차단 JS 제거](https://developers.google.com/speed/docs/insights/BlockingJS)
+- 🎁[JS 로딩 연기](https://www.internetmarketingninjas.com/tools/free-tools/pagespeed)
+
