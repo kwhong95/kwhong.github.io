@@ -23,6 +23,17 @@ toc_label: "주요 목차"
 더 세심한 성능 체크를 하고싶으시다면 위 참고자료에서 더욱 많은 자료를 얻으실 수 있습니다.
 
 ## 1. HTML
+> HTML 축소하기 : HTML 코드를 최대한 축소하고 주석, 공백 및 새줄을 제거한다.
+
+**왜?**  
+> 불필요한 공간, 주석 및 속성을 모두 제거하면 HTML 크기가 줄어들고 사이트의 페이지로드 시간이 빨라지며 사용자의 다운로드 속도가 분명히 줄어 듭니다.
+
+**어떻게?**  
+> 대부분의 프레임 워크에는 웹 페이지 축소를 용이하게하는 플러그인이 있습니다. 자동으로 작업을 수행 할 수있는 NPM 모듈을 사용할 수 있습니다. 
+- 🎁[HTML 축소 | 코드 축소](http://minifycode.com/html-minifier/)
+- 🎁[온라인 HTML | CSS | JS 압축기](https://refresh-sf.com/)
+
+
 ### 1.1 JS 태그 앞에 항상 CSS 태그 배치
 > JavaScript 코드를 사용하기 전에 CSS가 항상로드되었는지 확인합니다.
 
@@ -45,7 +56,7 @@ toc_label: "주요 목차"
 **어떻게?**
 > head안에 존재하는 `<link>` & `<style>` 태그를 `<script>` 태그 위에 배치한다.
 
-- [페이지 로드 속도 향상을 위한 `style & script` 가이드](https://www.internetmarketingninjas.com/tools/free-tools/pagespeed)
+- 🔍[페이지 로드 속도 향상을 위한 `style & script` 가이드](https://www.internetmarketingninjas.com/tools/free-tools/pagespeed)
 
 ### 1.2 iframe 수 최소화
 > 다른 기술 도입의 가능성이 없는 경우에만 **iframe**을 사용합니다. 가능한 **iframe**을 피할것!
@@ -54,12 +65,74 @@ toc_label: "주요 목차"
 > iframe은 따지고 보면 장점도 많은 친구이지만 성능을 다른 기술보단 성능이 떨어지는 것임을 알고 있어야합니다. **iframe의 장점과 단점**을 알아보죠
 
 **장점 & 단점**
-*<iframe>의 장점*  
-- 광고나 뱃지 같은 로딩이 느린 third-party-content
+
+*`<iframe>`의 장점*  
+- 광고나 뱃지 같은 로딩이 느린 third-party-content 대체
 - Security sandox
 - Script 병렬 다운로드  
 
-*<iframe>의 단점*
+*`<iframe>`의 단점*
 - 비어있어도 성능을 많이 잡아먹는다
 - page onload를 차단
 - 비의미론적인 마크업(Non-semantic)
+
+## 2. CSS
+> 모든 CSS 파일을 축소하고 주석,공백을 제거하라
+
+**왜?**
+> CSS 파일이 축소되면 콘텐츠가 더 빠르게로드되고 더 적은 데이터가 클라이언트로 전송됩니다. 프로덕션에서 항상 CSS 파일을 축소하는 것이 중요합니다. 대역폭 비용을 낮추고 리소스 사용량을 낮추려는 모든 비즈니스에 유용하며 사용자에게 유용합니다.
+
+**어떻게?**
+> 도구를 사용하여 빌드 또는 배포 전에나 배포 중에 파일을 자동으로 축소합니다.
+- 🎁[CSSnano](https://cssnano.co/): CSS를 많은 최적화를 통해 실행하여 최종 결과가 배포 환경에서 가능한 작도록 실행
+- 🎁[CSS Minifier](https://goonlinetools.com/css-minifier/)
+
+
+### 2.1 CSS 파일 로드시 DOM 로드 차단 방지
+> CSS 파일은 DOM이로드되는 데 시간이 걸리는 것을 방지하기 위해 로드 차단을 방지합니다.
+```html
+<link  rel = " preload " href = " global.min.css " as = " style " onload = " this.rel = 'stylesheet' "> 
+<noscript > <link  rel = " stylesheet " href = " global.min. css " > </noscript >
+```
+**왜?**
+> CSS 파일은 페이지로드를 차단하고 페이지 렌더링을 지연시킬 수 있습니다. **preload** 를 사용하면 브라우저가 페이지의 내용을 표시하기 시작하기 전에 실제로 CSS 파일을 로드 할 수 있습니다.
+
+**어떻게?**
+> `rel`속성에 **preload**를 추가하고 `as="style"` 를 `<link>`요소에 추가 해야합니다 .
+- 🎁[필라멘트 그룹별 loadCSS](https://github.com/filamentgroup/loadCSS)
+- 🔍[PreLoad CSS 예시](https://gist.github.com/thedaviddias/c24763b82b9991e53928e66a0bafc9bf)
+
+### 2.2 Critical CSS
+> 중요한 CSS(스크롤 없이 보이는 부분)는 페이지의 보이는 부분을 렌더링하는데 사용되는데 사용하는 모든 CSS를 의미합니다. 주요 CSS 호출 이전과 그사이에  `<style>` 태그에 한 줄로 삽입합니다(가능한 경우 축소 가능).
+
+**왜?**
+> 중요한 CSS를 인라인하면 웹 페이지의 렌더링 속도를 높이고 서버에 대한 요청 수를 줄일 수 있습니다.
+
+**어떻게?**
+> 온라인 도구 또는 Addy Osmani가 개발한 플러그인을 사용하여 중요한 CSS를 (따로)생성합니다.
+
+- 🔍[Critical CSS의 이해](https://www.smashingmagazine.com/2015/08/understanding-critical-css/)
+- 🎁[Addy Osmani의 Critical-path CSS 추출 및 인라인화](https://github.com/addyosmani/critical)
+
+### 2.3 임베디드 또는 인라인 CSS 사용하지 않기
+> HTTP/2 에는 유효하지 않습니다.
+
+**왜?**
+> 첫 번째 이유 중 하나는 콘텐츠와 디자인 을 분리 하는 것이 좋은 습관이기 때문 입니다. 또한 유지 관리가 용이 ​​한 코드를 확보하고 사이트에 액세스 할 수 있도록 유지하는 데 도움이됩니다. 그러나 성능과 관련하여 HTML 페이지의 파일 크기와로드 시간이 줄어들 기 때문입니다.
+
+**어떻게?**
+> 항상 외부 스타일 시트를 사용하거나 CSS를 `<head>`에 포함합니다(다른 CSS 성능 규칙을 따릅니다).
+- 📋[CSS 모범 사례 : CSS 인라인 스타일 피하기](https://www.lifewire.com/avoid-inline-styles-for-css-3466846)
+
+### 2.4 스타일 시트 복잡성 분석하기
+> 스타일 시트를 분석하면 문제, 중복 및 중복 CSS 선택기에 플래그를 지정하는 데 도움이 될 수 있습니다.
+
+**왜?**
+> 때로는 CSS에 중복 또는 유효성 검사 오류가있을 수 있으며, CSS 파일을 분석하고 이러한 복잡성을 제거하면 CSS 파일 속도를 높이는 데 도움이 될 수 있습니다 (브라우저에서 더 빨리 읽을 수 있기 때문).
+
+**어떻게?**
+> CSS 전처리기를 사용하여 CSS를 구성해야합니다. 아래 나열된 일부 온라인 도구는 코드를 분석하고 수정하는데도 도움이 될 수 있습니다.
+- [TesyMyCSS | CSS 성능 최적화 및 확인](https://www.testmycss.com/)
+- [CSS Stats](https://cssstats.com/)
+- [Macbre의 analyze-css: CSS 선택기 복잡성 및 성능 분석](https://github.com/macbre/analyze-css)
+- [WALLACE](https://www.projectwallace.com/) 는 CSS를 시간이 지남에 따라 통계를 저장하므로 변경사항을 추적할 수 있습니다.
