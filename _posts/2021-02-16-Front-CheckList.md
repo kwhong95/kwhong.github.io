@@ -29,7 +29,8 @@ toc_label: "주요 목차"
 > 불필요한 공간, 주석 및 속성을 모두 제거하면 HTML 크기가 줄어들고 사이트의 페이지로드 시간이 빨라지며 사용자의 다운로드 속도가 분명히 줄어 듭니다.
 
 **어떻게?**  
-> 대부분의 프레임 워크에는 웹 페이지 축소를 용이하게하는 플러그인이 있습니다. 자동으로 작업을 수행 할 수있는 NPM 모듈을 사용할 수 있습니다. 
+> 대부분의 프레임 워크에는 웹 페이지 축소를 용이하게하는 플러그인이 있습니다. 자동으로 작업을 수행 할 수있는 NPM 모듈을 사용할 수 있습니다.  
+
 
 - 🎁[HTML 축소 | 코드 축소](http://minifycode.com/html-minifier/)
 - 🎁[온라인 HTML | CSS | JS 압축기](https://refresh-sf.com/)
@@ -297,6 +298,7 @@ SVG 사용: 도구를 사용하고 85 미만의 수준 압축을 지정하세요
 - 🔍[CAN I USE..?](https://caniuse.com/brotli)
 
 ## 6. REACT 성능 개선
+
 - [성능 최적화 - REACT](https://reactjs.org/docs/optimizing-performance.html)
 - [REACT 이미지 변환](https://cloudinary.com/documentation/react_image_manipulation)
 - [Chrome DevTools로 React 성능 디버깅](https://velog.io/@shroad1802/React-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94)
